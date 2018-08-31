@@ -1,0 +1,24 @@
+/graphql?query=
+
+GET
+
+contries {}
+countries(name: "brazil") {}
+countries(initials: "br") {}
+
+states {}
+states(name: "ceara") {}
+states(name: "ceara", city: "forta", country: "bra") {}
+
+cities {}
+cities(name: "forta") {}
+cities(name: "forta", country: "braz") {}
+
+neighborhood {}
+neighborhood(name: "pirambu") {}
+neighborhood(name: "pirambu", city: "for", state: "ceara", country: "brazil") {}
+
+----------------------------------------------------------------------------------------------
+
+POST
+
