@@ -4,7 +4,9 @@
   "description": "Server Side Life Cost App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel-node index.js",
+    "babel-debug": "nodemon --exec babel-node-debug index.js"
   },
   "keywords": [
     "life-cost"
@@ -12,8 +14,14 @@
   "author": "Daniel Laurindo",
   "license": "ISC",
   "dependencies": {
+    "apollo-server": "^2.0.5",
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
-    "graphql": "^14.0.0"
+    "graphql": "^14.0.0",
+    "graphql-tools": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }
