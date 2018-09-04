@@ -79,5 +79,4 @@ mutation {
     city
   }
 }
-
 ``
