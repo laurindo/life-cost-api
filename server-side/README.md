@@ -39,7 +39,7 @@ Following link to see more: http://www.geonames.org/export/web-services.html
 }
 ``
 
-#### Example Mutation to create a simple name (this a simple test)
+#### Example Mutation - to create a simple name (this a simple test)
 ``
 mutation {
   createName(name: "jhon", lastname: "handson") {
@@ -47,4 +47,38 @@ mutation {
     lastname
   }
 }
+``
+
+#### Example Mutation- to create a Food
+``
+# Try to write your query here
+mutation {
+  createFood(
+    name: "Camarao"
+    quantity: 1.0
+    price: 30
+    category: "food"
+    subCategory: "fish"
+    portionQuantity: 1
+    portionType: "kg"
+    currency: "R$"
+    country: "BR"
+    state: "CE"
+    city: "Fortaleza",
+    neighbourhood: "Carlito Pamplona"
+  ) {
+    name
+    quantity
+    price
+    category
+    subCategory
+    portionQuantity
+    portionType
+    currency
+    country
+    state
+    city
+  }
+}
+
 ``
