@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
-import { schema } from './schemas';
-const server = new ApolloServer({ schema });
+const { typeDefs, resolvers } = require('./schemas/root-schema');
+const server = new ApolloServer({ typeDefs, resolvers });
 
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
