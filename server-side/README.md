@@ -51,7 +51,6 @@ mutation {
 
 #### Example Mutation- to create a Food
 ``
-# Try to write your query here
 mutation {
   createFood(
     name: "Camarao"
