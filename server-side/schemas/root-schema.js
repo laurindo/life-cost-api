@@ -1,5 +1,5 @@
 const { BookType, BookResolver } = require('./types/book-type');
-const { NameType, NameResolver, NameMutation } = require('./types/name-type');
+const { CategoryType, CategoryResolver, CategoryMutation } = require('./types/category-type');
 const { CountryType, CountryResolver } = require('./types/country-type');
 const { FoodType, FoodResolver, FoodMutation } = require('./types/food-type');
 
@@ -8,12 +8,12 @@ const Query = `
   type Query {
     countries(countryCode: String): [Country]
     books: [Book]
-    names: [Name]
+    categories: [Category]
     foods: [Food]
   }
 
   type Mutation {
-    createName(name: String!, lastname: String!): [Name]
+    createCategory(id: String!, name: String!): [Category]
     createFood(name: String!, quantity: Float!, price: Float!, category: String!, subCategory: String!, portionQuantity: Float!, portionType: String!, currency: String!, country: String!, state: String!, city: String!, neighbourhood: String): [Food]
   }
 `;
@@ -22,14 +22,14 @@ const resolvers = {
   Query: {
     ...CountryResolver,
     ...BookResolver,
-    ...NameResolver,
+    ...CategoryResolver,
     ...FoodResolver
   },
   Mutation: {
-    ...NameMutation,
+    ...CategoryMutation,
     ...FoodMutation
   }
 };
 
-exports.typeDefs = [ Query, FoodType, CountryType, BookType, NameType ];
+exports.typeDefs = [ Query, FoodType, CountryType, BookType, CategoryType ];
 exports.resolvers = resolvers;
