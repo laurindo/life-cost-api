@@ -1,15 +1,15 @@
 exports.CategoryType = `
   type Category {
-    id: String!
+    _id: String
     name: String
   }
 `;
 
 const categories = [{
-  id: "lkjlkjLKJ87676686",
+  _id: "lkjlkjLKJ87676686",
   name: 'beef'
 }, {
-  id: "lkjlkj87678678HKHKkjh",
+  _id: "lkjlkj87678678HKHKkjh",
   name: 'drink',
 }];
 
@@ -27,7 +27,7 @@ exports.CategoryResolver = {
 
 exports.CategoryMutation = {
   createCategory: (root, args) => {
-    categories.push({ id: args.id, name: args.name });
+    categories.push({ _id: args._id, name: args.name });
     return categories;
   }
 };
