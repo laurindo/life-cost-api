@@ -1,18 +1,18 @@
 exports.FoodType = `
   type Food {
     _id: String
-    name: String
-    quantity: Float
-    price: Float
-    category: String
-    subCategory: String
-    portionQuantity: Int
-    portionType: String
-    currency: String
+    name: String!
+    quantity: Float!
+    price: Float!
+    category: String!
+    subCategory: String!
+    portionQuantity: Float!
+    portionType: String!
+    currency: String!
     createdAt: String
-    country: String
-    state: String
-    city: String
+    country: String!
+    state: String!
+    city: String!
     neighbourhood: String
   }
 `;
