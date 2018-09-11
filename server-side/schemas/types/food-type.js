@@ -1,5 +1,6 @@
 exports.FoodType = `
   type Food {
+    _id: String
     name: String
     quantity: Float
     price: Float
@@ -17,6 +18,7 @@ exports.FoodType = `
 `;
 
 const foods = [{
+  id: '3214',
   name: 'Leite UHT Integral',
   quantity: 1.0,
   price: 2.98,
@@ -31,6 +33,7 @@ const foods = [{
   city: 'fortaleza',
   neighbourhood: 'pirambu'
 }, {
+  id: '4321',
   name: 'Energetico TNT Lata',
   quantity: 1.0,
   price: 8.49,
@@ -45,6 +48,7 @@ const foods = [{
   city: 'fortaleza',
   neighbourhood: 'pirambu'
 }, {
+  id: '1234',
   name: 'Picanha 1,300 KG',
   quantity: 1.0,
   price: 47.88,
@@ -75,6 +79,7 @@ exports.FoodResolver = {
 exports.FoodMutation = {
   createFood: (root, args) => {
     foods.push({
+      id: args.id,
       name: args.name,
       quantity: args.quantity,
       price: args.price,
