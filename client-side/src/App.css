@@ -9,10 +9,10 @@ body {
 }
 
 .header {
-  padding: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav {
@@ -34,6 +34,71 @@ body {
 .nav li a:hover {
   color: inherit;
   font-weight: bold;
+}
+
+.nav li.button-cost a {
+  background-color: #38a8e6;
+  border-radius: 10px;
+  padding: 0 10px;
+  color: #fff;
+}
+
+.nav li.button-cost a:hover {
+  box-shadow: #74b5dc 0px 2px 4px 1px;
+}
+
+.container-pick-list {
+  box-shadow: #cee3ef 0px 2px 10px 0px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.pick-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pick-list .item-title {
+  width: 100%;
+  margin: 0 5px;
+}
+
+.pick-list .item-title p {
+  font-weight: 700;
+}
+
+.pick-list .item-title p input {
+  background-color: #ebf0f3;
+  width: 93%;
+  border: 0;
+  border-radius: 7px;
+  padding: 7px;
+}
+
+.pick-list .items {
+  list-style: none;
+    text-align: left;
+    border: solid 1px #dceaf3;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+button {
+  margin: 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 5px 20px;
+  background-color: #c5aae4;
+  color: #fff;
+  border: solid 1px #baa8f5;
+  box-shadow: #dde2e4 0 1px 5px 0px;
 }
 
 .App {

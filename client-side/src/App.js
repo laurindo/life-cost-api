@@ -3,7 +3,7 @@ import { ApolloProvider } from 'react-apollo';
 import React, { Component } from 'react';
 import './App.css';
 import logo from './logo.svg';
-import RouterExample from './routes';
+import RouterExample from './config/routes';
 
 const client = new ApolloClient({
   uri: 'https://w5xlvm3vzz.lp.gql.zone/graphql'
