@@ -7,13 +7,13 @@ const CarouselContainer = styled.div`
   transform: ${(props) => {
     if (props.numSlides === 1) return 'translateX(0%)'
     if (props.numSlides === 2) {
-      if (!props.sliding && props.direction === 'next') return 'translateX(calc(-80% + 30px))'
+      if (!props.sliding && props.direction === 'next') return 'translateX(calc(-25% + 30px))'
       if (!props.sliding && props.direction === 'prev') return 'translateX(0%)'
-      if (props.direction === 'prev') return 'translateX(calc(-80% + 30px))'
+      if (props.direction === 'prev') return 'translateX(calc(-25% + 30px))'
       return 'translateX(0%)'
     }
-    if (!props.sliding) return 'translateX(calc(-80% - 20px))'
-    if (props.direction === 'prev') return 'translateX(calc(2 * (-80% - 20px)))'
+    if (!props.sliding) return 'translateX(calc(-25% - 20px))'
+    if (props.direction === 'prev') return 'translateX(calc(2 * (-25% - 20px)))'
     return 'translateX(0%)'
   }};
 `

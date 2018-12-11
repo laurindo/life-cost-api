@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const CarouselSlot = styled.div`
   flex: 1 0 100%;
-  flex-basis: 80%;
+  flex-basis: 25%;
   margin-right: 20px;
   order: ${(props) => props.order};
   opacity: ${(props) => {
